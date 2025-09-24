@@ -1,13 +1,15 @@
 import { Search, ShoppingCart, Heart } from "lucide-react";
 
-import logo from "../assets/logo (2).svg"
+import logo from "../assets/logo (2).svg";
 import inst from "../assets/instagram.svg";
 import facebook from "../assets/facebook.svg";
 
 import { memo } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Header = memo(() => {
   const navLinks = ["ALL PRODUCTS", "ABOUT SEEDRA", "OUR BLOG", "CONTACTS"];
+  const navigate = useNavigate();
 
   return (
     <header className="bg-white shadow-[0_4px_25px_rgba(207,207,207,0.25)] w-full ">
@@ -19,6 +21,7 @@ export const Header = memo(() => {
             width={97}
             height={21}
             className="w-full h-full"
+            onClick={() => navigate("/")}
           />
         </div>
 
@@ -28,7 +31,7 @@ export const Header = memo(() => {
           {navLinks.map((link, index) => (
             <div key={link} className="flex items-center">
               <a
-                href="#"
+                href="/about"
                 className="text-[#70737C] font-normal text-[14px] leading-[178%] hover:text-[#359740] transition-colors"
               >
                 {link}

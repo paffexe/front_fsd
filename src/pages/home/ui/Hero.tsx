@@ -1,6 +1,7 @@
 import { memo } from "react";
 import hero from "../assets/hero.png";
 import poster from "../assets/Screenshot 2025-09-24 085736.png";
+import flame from "../assets/fire.svg"
 
 const Hero = memo(() => {
   return (
@@ -33,7 +34,7 @@ const Hero = memo(() => {
           <div className="w-[335px] h-[130px] mb-[25px]">
             <div className="flex items-center mb-4">
               <img
-                src={hero}
+                src={flame}
                 alt="Hot deal"
                 width={29}
                 height={37}
@@ -43,7 +44,7 @@ const Hero = memo(() => {
                 <span className="font-semibold text-[42px] leading-[54px] text-[#1F2533]">
                   $12.56
                 </span>
-                <span className="font-semibold text-[22px] leading-[54px] text-[#70737C]">
+                <span className="font-semibold text-[22px] leading-[54px] text-[#70737C] line-through">
                   $15.56
                 </span>
               </div>
